@@ -1,9 +1,16 @@
 [project]
 name = "periodic_database_jobs"
-description = "TBD"
+description = "Periodic run database jobs"
 license = {text = "MIT" }
 version = "1.0"
-dependencies = []
+dependencies = [
+	"dacite",
+	"postgresql_access",
+	"keyrings.efile",
+    "psycopg[binary]>=3.1",
+    "PyYAML>=6.0",
+    "dateparser>=1.2",
+]
 requires-python= ">= 3.10"
 readme = "README.md"
 authors = [
@@ -23,6 +30,7 @@ periodic_database_jobs = "periodic_database_jobs.main:main"
 
 [project.optional-dependencies] 
 # test = ['pytest']
+ipython = ['ipython']
 
 [build-system]
 requires = ["setuptools"]
