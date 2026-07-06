@@ -1,0 +1,9 @@
+[Unit]
+Description=nmrhub-periodic-db Service
+
+[Service]
+ExecStart=/opt/nmrhub.d/periodic_database_jobs/.venv/bin/periodic_database_jobs /etc/nmrhub.d/periodic_db.yaml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

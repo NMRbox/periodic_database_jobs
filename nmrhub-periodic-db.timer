@@ -1,0 +1,9 @@
+[Unit]
+Description=nmrhub-periodic-db Timer
+
+[Timer]
+OnCalendar=3:20
+Persistent=true
+
+[Install]
+WantedBy=timers.target
